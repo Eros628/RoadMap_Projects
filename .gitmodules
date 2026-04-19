@@ -1,9 +1,9 @@
 [submodule "Single_Page_CV"]
-	path = Single_Page_CV
+	path = FrontEnd/Single_Page_CV
 	url = https://github.com/Eros628/Single_Page_CV_FrontEnd_Training.git
 [submodule "Basic_Website"]
 	path = FrontEnd/Basic_Website
 	url = https://github.com/Eros628/Basic_Website.git
 [submodule "Change_log"]
-	path = FrontEnd/Change_log/Change_log
+	path = FrontEnd/Change_log
 	url = https://github.com/Eros628/Change_log.git
