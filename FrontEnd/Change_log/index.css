@@ -1,0 +1,9 @@
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-changelog{
+    width: 50%;
+}
