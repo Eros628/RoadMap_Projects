@@ -1,0 +1,133 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-testimonial {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 20px;
+}
+
+.row1-container{
+    flex: 1;
+    display: flex;
+    gap: 20px;
+}
+
+.testimonial-box1{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+
+
+.comments-box{
+    position: relative;
+    background-color: rgb(24, 23, 23);
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.comments-box::before{
+    z-index: -1;
+    position: absolute;
+    bottom: -12px;
+    left: 9px;
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-top: 30px solid rgb(24, 23, 23);
+}
+
+.comments-box p{
+    margin: 0px;
+}
+
+.testimonial-box2{
+    flex:1;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px ;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+
+
+img{
+    height: 70px;
+    aspect-ratio: 2/2;
+    border-radius: 50%;
+}
+
+.profile-box{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.name-info-box h4{
+     margin: 0px;
+}
+
+.name-info-box p{
+    margin: 0px;
+    font-size: 12px;
+}
+
+.row2-container{
+    flex: 1;
+    display: flex;
+    gap: 20px;
+}
+
+.testimonial-box3{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(24, 23, 23);
+    color: white;
+    padding: 20px 10px 20px 30px;
+    border-radius: 20px;
+    gap: 15px;
+}
+
+
+#big-picture{
+    height:250px;
+    border-radius: 20px;
+}
+
+#big-text-name{
+    font-size: 25px;
+    margin: 0px;
+}
+#big-text-name + p {
+    margin: 5px 0px 0px 0px ;
+    color: gray;
+}
+.star-container{
+    display: flex;
+    gap: 5px;
+}
+
+svg{
+    height: 20px;
+    width: 20px;
+}

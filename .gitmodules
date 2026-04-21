@@ -8,5 +8,5 @@
 	path = FrontEnd/Change_log
 	url = https://github.com/Eros628/Change_log.git
 [submodule "Testemonial_cards"]
-	path = Testemonial_cards
+	path = FrontEnd/Testemonial_cards
 	url = https://github.com/Eros628/Testemonial_cards.git
