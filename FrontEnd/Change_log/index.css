@@ -1,0 +1,86 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.upper-section{
+    text-align: center;
+}
+
+.upper-section > p{
+    color: gray;
+    font-weight: bold;
+}
+
+
+.container-changelog{
+    padding: 30px 10px 40px 10px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 30px;
+    gap: 20px;
+}
+
+.middle-section{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    
+}
+
+.date-container{
+    text-align: center;
+    color: gray;
+    display: flex;
+    flex-direction: column;
+}
+
+.description-container{
+    border-left: 1px solid black;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.description-container > div{
+    position: relative;
+}
+
+.lower-section{
+    padding: 40px;
+    text-align: center;
+}
+
+.btn{
+    padding: 15px 40px 15px 40px ;
+    border-radius: 10px;
+    color: white;
+    background-color: rgb(24, 23, 23);
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    box-shadow: 0px 0px 5px black;
+    
+}
+
+
+.circle{
+    position: absolute;
+    left: -29px;
+    bottom: 20px;   
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: black;
+}

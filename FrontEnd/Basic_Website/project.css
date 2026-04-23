@@ -1,0 +1,41 @@
+main{
+    display:  flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 50px;
+}
+
+main > h1{
+    text-align: center;
+}
+
+.card{
+    height: 300px;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid #BB8D5E;
+    border-radius: 20px;
+    padding-right: 30px;
+}
+
+.card > img{
+    flex: 1;
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.card > div{
+    flex: 1;
+}
+
+.project-description{
+    padding:20px;
+}
+
+.project-5.card{
+    margin-bottom: 20px;
+}
