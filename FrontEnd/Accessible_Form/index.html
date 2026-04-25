@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Accesible Form</title>
+</head>
+<body>
+    <main>
+        <div class="form-container">
+            <form>
+                <label for="name">Full Name</label>
+                <input id="name" type="text">
+
+                <label for="email">Email</label>
+                <input id="email" type="email" required>
+
+                <label for="password">Enter Password</label>
+                <input id="password" type="password" required>
+
+                <label for="confirm_password">Confirm Password</label>
+                <input id="confirm_password" type="password" required>
+
+                <button class="btn-update">
+                    Update Profile
+                </button>
+            </form>
+            <div class="progression-container">
+                <!---
+                <progress id="profile_progress" value="65" max="100">65%</progress>
+                <label for="profile_progress">Profile Completeness</label>
+                -->
+                <div class="progress-circle">
+                    <p>65%</p>
+                </div>
+                <p>Profile Completeness</p>
+                <div class="check-list-container">
+                    <p>Create Account</p>
+                    <p>Update Roadmap Projects</p>
+                    <p>Setup Public Profile</p>
+                    <p>Complete your first project</p>
+                    <p>Invite your Friends</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
