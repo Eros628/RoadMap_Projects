@@ -9,13 +9,20 @@ const percentage = document.querySelector('.percentage');
 const errorText = document.createElement('p');
 const form = document.querySelector('form');
 const progressCircle = document.querySelector('.progress-circle');
+const showPass = document.querySelector(".show-pass");
+const notVisible = document.querySelector(".not-show");
+const visible = document.querySelector(".show");
+const passContainer = document.querySelector(".confirm.password-container");
+const confirmShowPass = document.querySelector(".confirm.show-pass");
+const confirmNotVisible = document.querySelector(".confirm.not-show");
+const confirmVisible = document.querySelector(".confirm.show");
 
 errorText.textContent = "Password must be the same";
 errorText.style.margin = 0;
 errorText.style.fontSize = "11px";
 errorText.style.color = "red";
-
-
+let isVisible = false;
+let confirmIsVisible = false;
 const updateProgess = ()=>{
     
     let progress  = 0;
@@ -89,7 +96,7 @@ password.addEventListener('focusout', function(){
         progress -= 20;
         percentage.textContent = progress;
     }
-})
+});
 
 
 form.addEventListener('submit', function(event){
@@ -97,10 +104,43 @@ form.addEventListener('submit', function(event){
 
 
     if(password.value != confirm_pass.value){
-        confirm_pass.insertAdjacentElement("afterend", errorText);
+        passContainer.insertAdjacentElement("afterend", errorText);
 
         password.style.borderColor = "red";
         confirm_pass.style.borderColor = "red";
     }
-})
+});
+
+confirmShowPass.addEventListener('click', function(){
+    if(isVisible){
+        confirmVisible.style.display = "none";
+        confirmNotVisible.style.display = "block";
+        confirm_pass.type = "password";
+        isVisible = false;
+     }
+    else{
+        confirmVisible.style.display = "block";
+        confirmNotVisible.style.display = "none";
+        confirm_pass.type = "text";
+        isVisible = true;
+     }
+
+});
+
+showPass.addEventListener('click', function(){
+    if(isVisible){
+        visible.style.display = "none";
+        notVisible.style.display = "block";
+        password.type = "password";
+       confirmIsVisible = false;
+     }
+    else{
+        visible.style.display = "block";
+        notVisible.style.display = "none";
+        password.type = "text";
+        confirmIsVisible = true;
+     }
+
+});
+
 
