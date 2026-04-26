@@ -28,7 +28,7 @@ const updateProgess = ()=>{
     if(email.value.trim() !== ""){
         emailText.style.textDecorationLine = "line-through";
         emailText.style.textDecorationStyle = "dashed";
-        progress +=34;
+        progress +=33;
     }
 
     if(password.value.trim() !== ""){
@@ -37,22 +37,22 @@ const updateProgess = ()=>{
         progress +=33;
     }
 
-    percentage.textContent = progress + "%";
+    percentage.textContent =  progress != 0 ? progress + 1 + "%" : progress + "%";
     if(progress == 0){
-         progressCircle.style.borderLeft= "2px solid black";
+        progressCircle.style.borderLeft= "5px solid black";
     }
     if(progress == 33){
-        progressCircle.style.borderBottom = "2px solid black";
-        progressCircle.style.borderRight = "2px solid black";
+        progressCircle.style.borderBottom = "5px solid black";
+        progressCircle.style.borderRight = "5px solid black";
         progressCircle.style.borderLeft = "5px solid green";
     }
-    else if (progress == 67){
-        progressCircle.style.borderTop = "2px solid black";
+    else if (progress == 66){
+        progressCircle.style.borderTop = "5px solid black";
         progressCircle.style.borderBottom = "5px solid green";
-       progressCircle.style.borderRight = "5px solid green";
+        progressCircle.style.borderRight = "5px solid green";
     }
 
-    else if (progress == 100){
+    else if (progress == 99){
         progressCircle.style.borderTop = "5px solid green";
     }
 }
