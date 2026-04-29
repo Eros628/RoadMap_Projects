@@ -24,3 +24,7 @@ Project URL: https://roadmap.sh/projects/datepicker-ui
 ### Accessible Form
 
 Project URL: https://roadmap.sh/projects/accessible-form-ui
+
+### Image Grid Layout
+
+Project URL: https://roadmap.sh/projects/image-grid
