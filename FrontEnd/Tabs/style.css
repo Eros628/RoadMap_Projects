@@ -32,8 +32,12 @@ main{
 }
 
 .nav-section p{
+    cursor: pointer;
     padding: 5px;
+    border-bottom: none;
 }
+
+
 
 .tab{
     display: none;
@@ -49,7 +53,7 @@ main{
     gap: 20px;
 }
 
-.first.tab .box{
+.box{
     height: 120px;
     width: 100%;
     background-color: black;
@@ -60,8 +64,60 @@ main{
     border-radius: 15px;
 }
 
+.second.tab{
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+}
 
 
+.third.tab{
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+}
 
+.fourth.tab{
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+}
 
+.third.tab .box{
+    display: grid;
+    background-color: transparent;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: 5px;
+}
+
+.grid{
+    height: 100%;   
+    width: 100%;
+    border-radius: 5px;
+}
+
+.grid.item1{
+     background-color: rgb(224, 212, 32);
+    grid-column:  1/3;
+    grid-row: 1/1;
+}
+
+.grid.item2{
+    background-color: green;
+    grid-column:  1/1;
+    grid-row: 2/2;
+}
+
+.grid.item3{
+    background-color: black;
+    grid-column: 2/2;
+    grid-row: 2/2;
+}
+
+.grid.item4{
+    background-color: blue;
+    grid-column: 3/3;
+    grid-row: 1/3;
+}
 
