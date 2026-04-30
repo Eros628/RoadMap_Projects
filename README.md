@@ -32,3 +32,7 @@ Project URL: https://roadmap.sh/projects/image-grid
 ### Tool Tip
 
 Project URL: https://roadmap.sh/projects/tooltip-ui
+
+### Tabs
+
+Project URL: https://roadmap.sh/projects/simple-tabs
