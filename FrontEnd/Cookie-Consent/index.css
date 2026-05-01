@@ -300,6 +300,7 @@ main{
    display: flex;
    flex-direction: column;
    padding: 40px;
+   gap: 40px;
 }
 
 .hero-section{
@@ -438,5 +439,94 @@ main{
     margin-left: 0;
 }
 
+
+.list-cards-container{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    gap: 20px;
+  
+}
+
+.card{
+    flex: 1;
+    width: 200px;
+    background-color: #F5F5F5;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    gap: 25px;
+    flex-direction: column;
+}
+
+.card .upper-section{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.card.one .upper-section{
+    border-bottom: 2px solid #5030E5;
+}
+
+.card.one .upper-section ul li::marker{
+    color: #5030E5;
+}
+
+.card.two .upper-section{
+    border-bottom: 2px solid #FFA500;
+}
+
+.card.two .upper-section ul li::marker{
+    color: #FFA500;
+}
+
+.card.three .upper-section{
+    border-bottom: 2px solid #8BC48A;
+}
+
+.card.three .upper-section ul li::marker{
+    color: #8BC48A;
+}
+
+.card .upper-section button{
+    display: flex;
+    padding: 5px;
+    border-radius: 7px;
+    align-items: center;
+    border: none;
+    background-color: rgba(81, 48, 229, 0.13);
+}
+
+.card .upper-section svg {
+    height: 15px;
+    width: 15px;
+}
+
+.card .lower-section{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.box{
+    height: 200px;
+    width: 100%;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.card .upper-section ul + p {
+    height: fit-content;
+    font-size: 12px;
+    padding: 1px 4px;
+    border-radius: 20px;
+    background-color: #DBDBDB;
+    margin-right: auto;
+}
+
+.card .upper-section ul li{
+    list-style-position: inside;
+}
 
 
