@@ -45,3 +45,7 @@ Project URL: https://roadmap.sh/projects/cookie-consent
 ### Restricted Text Box
 
 Project URL: https://roadmap.sh/projects/restricted-textarea
+
+### Accordion
+
+Project URL: https://roadmap.sh/projects/accordion
