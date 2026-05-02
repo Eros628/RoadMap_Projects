@@ -24,7 +24,7 @@ errorText.style.color = "red";
 let isVisible = false;
 let confirmIsVisible = false;
 const updateProgess = ()=>{
-    
+
     let progress  = 0;
     if(nameInput.value.trim() !== ""){
         nameText.style.textDecorationStyle = "dashed";

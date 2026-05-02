@@ -1,0 +1,47 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    min-height: fit-content;
+}
+
+.accordion-container{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: fit-content;
+    font-size: 14px;
+    gap: 20px;
+}
+
+.accordion-container > div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.question-box{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.answer-box{
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    border: 1px solid black;
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
