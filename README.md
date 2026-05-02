@@ -36,3 +36,7 @@ Project URL: https://roadmap.sh/projects/tooltip-ui
 ### Tabs
 
 Project URL: https://roadmap.sh/projects/simple-tabs
+
+### Cookie Consent
+
+Project URL: https://roadmap.sh/projects/cookie-consent
