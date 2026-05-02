@@ -40,3 +40,8 @@ Project URL: https://roadmap.sh/projects/simple-tabs
 ### Cookie Consent
 
 Project URL: https://roadmap.sh/projects/cookie-consent
+
+
+### Restricted Text Box
+
+Project URL: https://roadmap.sh/projects/restricted-textarea
