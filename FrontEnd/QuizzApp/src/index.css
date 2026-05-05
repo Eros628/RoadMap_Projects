@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kiwi+Maru&family=Momo+Trust+Display&display=swap');
+:root{
+  --bg-color: #1B1A60;
+  --text-color: white;
+  --header-color: #242222;
+  font-family: 'Momo Trust Display', sans-serif ;
+}
+
+
+body{
+  padding: 0;
+  margin: 0;
+}
+#root{
+  background-color: var(--bg-color);
+}
