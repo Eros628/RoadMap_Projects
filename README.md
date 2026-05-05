@@ -53,3 +53,7 @@ Project URL: https://roadmap.sh/projects/accordion
 ### Age Calculator
 
 Project URL: https://roadmap.sh/projects/age-calculator
+
+### Flash Cards
+
+Project URL: https://roadmap.sh/projects/flash-cards
