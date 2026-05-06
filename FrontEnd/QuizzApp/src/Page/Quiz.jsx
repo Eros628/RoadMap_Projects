@@ -1,12 +1,16 @@
 import { Outlet } from "react-router";
 import '../App.css';
 import Header from "../components/Header";
+import { useEffect, useState } from "react";
+import { ArrowRight } from "lucide-react";
 
-export function Quiz({timer}){
+export function Quiz({timer, quizItems, currentIndex, setCurrentIndex}){
+    
+
     return (
         <>
             <div className="quiz-container">
-                <Header timer={timer}/>
+                <Header timer={timer} currentIndex={currentIndex} setCurrentIndex={setCurrentIndex} quizItems={quizItems}/>
                 <div className="quiz-content">
                     <Outlet></Outlet>
                 </div>
@@ -15,11 +19,48 @@ export function Quiz({timer}){
     )
 }
 
-export function QuizStart(){
+export function QuizStart({quizItems, currentIndex, timer, setCurrentIndex}){
+
+   console.log(timer);
+
     return(
         <>
-            <div className="quiz-items"></div>
+            <div className="quiz-items">
+                <div>
+                    <p>{(currentIndex + 1) + "/" + quizItems.length }</p>
+                    <div className="progress-bar-container">
+                        <div className="progress-bar" style={{width: ((currentIndex + 1) * 20) + "%"}}></div>
+                    </div>
+                </div>
+                
+                <QuizCard item={quizItems[currentIndex]} timer={timer} setCurrentIndex={setCurrentIndex} currentIndex={currentIndex} quizItems={quizItems}/>
+            </div>
         </>
+    )
+}
+
+
+function QuizCard({quizItems,item, timer, setCurrentIndex, currentIndex}){
+    return(
+        <div className="quiz-card">
+            <div className="question">
+                {item.question}
+            </div>
+            <div className="choices">
+                {item.choices.map((choice, index)=>{
+                    return(
+                    <button className="choice" key={index}>
+                        {choice}
+                    </button>
+                    )
+                })}
+            </div>
+             {timer == 0 &&  <button onClick={()=>{
+                if(currentIndex < quizItems.length - 1){
+                    setCurrentIndex(currentIndex + 1);
+                }
+             }} className="btn-next">Next <ArrowRight /></button>}
+        </div>
     )
 }
 
