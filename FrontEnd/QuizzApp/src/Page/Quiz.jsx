@@ -3,10 +3,8 @@ import '../App.css';
 import Header from "../components/Header";
 import QuizCard from "../components/QuizCard";
 import { useEffect, useState } from "react";
-import { ArrowRight } from "lucide-react";
 
 export function Quiz({timer, quizItems, currentIndex, setCurrentIndex}){
-    
 
     return (
         <>

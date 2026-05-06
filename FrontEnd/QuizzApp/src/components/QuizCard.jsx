@@ -1,8 +1,10 @@
 import '../App.css'
 import { useEffect, useState } from 'react';
 import { ArrowRight } from "lucide-react";
+import { useNavigate } from 'react-router';
 
 function QuizCard({quizItems,item, timer, setCurrentIndex, currentIndex, user, setUser}){
+    const navigate = useNavigate();
     useEffect(()=>{
     
         if(currentIndex > user.answers.length){
@@ -62,6 +64,9 @@ function QuizCard({quizItems,item, timer, setCurrentIndex, currentIndex, user, s
              {(timer == 0 || timer == null) &&  <button onClick={()=>{
                 if(currentIndex < quizItems.length - 1){
                     setCurrentIndex(currentIndex + 1);
+                }
+                else{
+                    navigate('/quiz/result');
                 }
              }} className="btn-next">Next <ArrowRight /></button>}
         </div>

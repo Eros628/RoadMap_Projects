@@ -1,9 +1,9 @@
-import { useLocation } from 'react-router';
+import { useLocation, useNavigate } from 'react-router';
 import '../App.css'
 import { useEffect, useState } from 'react';
 
 function Header({timer, currentIndex, setCurrentIndex, quizItems}){
-
+    const navigate = useNavigate();
     const formatTime = (totalSeconds)=>{
     
         const minutes = Math.floor(totalSeconds/60);
@@ -44,8 +44,8 @@ function Header({timer, currentIndex, setCurrentIndex, quizItems}){
                 else{
                     if(currentIndex == quizItems.length - 1){
                         setCurrentIndex(currentIndex + 1);
+                        navigate('/quiz/result');
                     }
-                    return;
                 }
             }
 
