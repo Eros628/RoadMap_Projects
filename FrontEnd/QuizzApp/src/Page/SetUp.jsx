@@ -26,7 +26,7 @@ function SetUp({timer, setTimer}){
                         } className="btn-plus">+10</button>
                         <button onClick={
                             ()=>{
-                                setTimer(0);
+                                setTimer(null);
                             }
                         } className="btn-minus"><Infinity /></button>
                     </div>

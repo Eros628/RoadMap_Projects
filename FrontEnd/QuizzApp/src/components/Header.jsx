@@ -31,18 +31,20 @@ function Header({timer, currentIndex, setCurrentIndex, quizItems}){
     useEffect(()=>{
         if(isStart){
             
-            if(timer == 0){
-                console.log("ZEROO");
+            if(timer == 0 || timer == null){
                 return;
             }
 
             if(countTime <= 0) {
                 if(currentIndex < quizItems.length - 1){
                     console.log(currentIndex);
-                    setCurrentIndex(currentIndex + 1);
+                    setCurrentIndex(currentIndex + 1 );
                     setCount(timer);
                 }
                 else{
+                    if(currentIndex == quizItems.length - 1){
+                        setCurrentIndex(currentIndex + 1);
+                    }
                     return;
                 }
             }
@@ -59,7 +61,7 @@ function Header({timer, currentIndex, setCurrentIndex, quizItems}){
     }, [countTime, location.pathname]);
     
     const timePassed = timer - countTime;
-    const timePercentage = timer > 0 ? (timePassed / timer) * 100: 0;
+    const timePercentage = timer > 0 || timer == null ? (timePassed / timer) * 100: 0;
   
     return (
         <div>

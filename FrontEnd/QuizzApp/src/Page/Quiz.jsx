@@ -19,9 +19,7 @@ export function Quiz({timer, quizItems, currentIndex, setCurrentIndex}){
     )
 }
 
-export function QuizStart({quizItems, currentIndex, timer, setCurrentIndex}){
-
-   console.log(timer);
+export function QuizStart({quizItems, currentIndex, timer, setCurrentIndex, user, setUser}){
 
     return(
         <>
@@ -33,14 +31,52 @@ export function QuizStart({quizItems, currentIndex, timer, setCurrentIndex}){
                     </div>
                 </div>
                 
-                <QuizCard item={quizItems[currentIndex]} timer={timer} setCurrentIndex={setCurrentIndex} currentIndex={currentIndex} quizItems={quizItems}/>
+                <QuizCard item={quizItems[currentIndex > quizItems.length - 1 ? currentIndex - 1 : currentIndex]} timer={timer} setCurrentIndex={setCurrentIndex} currentIndex={currentIndex} quizItems={quizItems} setUser={setUser} user={user}/>
             </div>
         </>
     )
 }
 
 
-function QuizCard({quizItems,item, timer, setCurrentIndex, currentIndex}){
+function QuizCard({quizItems,item, timer, setCurrentIndex, currentIndex, user, setUser}){
+    useEffect(()=>{
+    
+        if(currentIndex > user.answers.length){
+            setUser(prev => {
+                return{
+                    ...prev,
+                    answers: [...prev.answers, null]
+                }
+            });
+        }
+
+        else{
+            return;
+        }
+    },[currentIndex])
+    
+    const setChoice = (userChoice)=>{
+       setUser(prev => {
+         const newAnswers = [...prev.answers];
+         console.log(newAnswers.length);
+         if(newAnswers.length > currentIndex){
+            newAnswers[currentIndex] = userChoice;
+         }
+
+         else{
+            if(currentIndex < quizItems.length){
+                newAnswers.push(userChoice);
+            }
+            
+         }
+
+         return{
+            ...prev,
+            answers: newAnswers
+         }
+       });
+
+    }
     return(
         <div className="quiz-card">
             <div className="question">
@@ -49,13 +85,17 @@ function QuizCard({quizItems,item, timer, setCurrentIndex, currentIndex}){
             <div className="choices">
                 {item.choices.map((choice, index)=>{
                     return(
-                    <button className="choice" key={index}>
+                    <button onClick={
+                        ()=>{
+                            setChoice(choice);
+                        }
+                    } className="choice" key={index}>
                         {choice}
                     </button>
                     )
                 })}
             </div>
-             {timer == 0 &&  <button onClick={()=>{
+             {(timer == 0 || timer == null) &&  <button onClick={()=>{
                 if(currentIndex < quizItems.length - 1){
                     setCurrentIndex(currentIndex + 1);
                 }

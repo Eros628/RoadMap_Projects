@@ -9,6 +9,14 @@ import { useState } from 'react';
 function App() {
   const [timer, setTimer] = useState(0);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [user, setUser] = useState({
+    answers: [],
+    score: 0
+  });
+
+
+  console.log(user);
+
   const quizItems = [
         {
             question: "Which planet in our solar system is known as the 'Red Planet'?", 
@@ -46,7 +54,7 @@ function App() {
         
         <Route path='/quiz' element={<Quiz timer={timer} quizItems={quizItems} currentIndex={currentIndex} setCurrentIndex={setCurrentIndex}/>}>
           <Route path='set-up' element={<SetUp timer={timer} setTimer={setTimer} />}></Route>         
-          <Route path='start' element={<QuizStart  quizItems={quizItems} currentIndex={currentIndex} setCurrentIndex={setCurrentIndex} timer={timer}/>}></Route>
+          <Route path='start' element={<QuizStart  quizItems={quizItems} currentIndex={currentIndex} setCurrentIndex={setCurrentIndex} timer={timer} user={user} setUser={setUser}/>}></Route>
           <Route path='result' element={<Result />}></Route>
         </Route>
       </Routes>
