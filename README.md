@@ -57,3 +57,7 @@ Project URL: https://roadmap.sh/projects/age-calculator
 ### Flash Cards
 
 Project URL: https://roadmap.sh/projects/flash-cards
+
+### Quiz App
+
+Project URL: https://roadmap.sh/projects/quiz-app 
