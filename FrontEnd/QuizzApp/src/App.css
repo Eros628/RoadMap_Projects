@@ -341,27 +341,6 @@ button{
   color:var(--bg-color);
 }
 
-
-@media (max-width: 550px) {
-   
-    .quiz-card, .progress-bar-container{
-      width: 400px;
-    }
-}
-
-@media(max-width: 450px){
-  .header > h1, .timer-text{
-      font-size: 20px;
-    }
-  .choices{
-    grid-template-columns: 1fr;
-  }
-
-    .quiz-card, .progress-bar-container{
-      width: 300px;
-    }
-}
-
 .modal-overlay{
   position: fixed;
   display: flex;
@@ -416,6 +395,7 @@ button{
   text-align: center;
   height: fit-content;
   font-size: 14px;
+  align-items: center;
 
 }
 
@@ -435,9 +415,69 @@ button{
   text-align: start !important;
 }
 
+.show-letter{
+  display: none;
+  text-align: center;
+}
+
+
+@media (max-width: 550px) {
+   .show-full{
+    display: none;
+   }
+
+   .show-letter{
+    display: flex;
+    justify-content: center;
+   }
+   .modal-content{
+      width: 100%;
+      font-size: 10px !important;
+  }
+    .quiz-card, .progress-bar-container{
+      width: 400px;
+    }
+}
+
+@media(max-width: 450px){
+    .show-full{
+    display: none;
+   }
+
+   .show-letter{
+    display: flex;
+    justify-content: center;
+   }
+  .modal-content{
+    width: 100%;
+    font-size: 10px !important;
+  }
+  .header > h1, .timer-text{
+      font-size: 20px;
+    }
+  .choices{
+    grid-template-columns: 1fr;
+  }
+
+    .quiz-card, .progress-bar-container{
+      width: 300px;
+    }
+}
+
 
 
 @media(max-width: 340px){
+  .modal-content *{
+    font-size: 10px;
+  }
+    .show-full{
+    display: none;
+   }
+
+   .show-letter{
+    display: flex;
+    justify-content: center;
+   }
     .header > h1, .timer-text{
       font-size: 20px;
     }

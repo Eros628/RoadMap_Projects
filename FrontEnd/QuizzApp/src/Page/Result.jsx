@@ -1,8 +1,10 @@
 import { use, useEffect, useState } from "react";
 import ResultModal from "../components/ResultModal";
+import { useNavigate } from "react-router";
 
 
-function Result({user, setUser,quizItems}){
+function Result({user, setUser,quizItems, setCurrentIndex, setTimer}){
+    const navigate = useNavigate();
     const [isGreet, setIsGreet] = useState(true);
     const [result, setResult] = useState({
         userAnswer : user.answers,
@@ -13,7 +15,7 @@ function Result({user, setUser,quizItems}){
     const [isOpen, setIsOpen] = useState(false);
 
 
-
+    
     useEffect(()=>{
    
 
@@ -46,10 +48,30 @@ function Result({user, setUser,quizItems}){
                     </div>
 
                     <div className="result-btn-container" >
-                        <button className="btn-retake">Retake</button>
-                        <button className="btn-home">Home</button>
                         <button onClick={
                             ()=>{
+                                setUser({
+                                    answers: [],
+                                    score: 0
+                                });
+                                setCurrentIndex(0);
+                                setTimer(0);
+                                navigate("/quiz/set-up")
+                            }
+                        } className="btn-retake">Retake</button>
+                        <button onClick={
+                            ()=>{
+                                setUser({
+                                    answers: [],
+                                    score: 0
+                                });
+                                setCurrentIndex(0);
+                                setTimer(0);
+                                navigate('/')
+                            }
+                        } className="btn-home">Home</button>
+                        <button onClick={
+                            ()=>{ 
                                 setIsOpen(!isOpen);
                             }
                         }

@@ -11,7 +11,7 @@ function QuizCard({quizItems,item, timer, setCurrentIndex, currentIndex, user, s
             setUser(prev => {
                 return{
                     ...prev,
-                    answers: [...prev.answers, null]
+                    answers: [...prev.answers, "n/a"]
                 }
             });
         }

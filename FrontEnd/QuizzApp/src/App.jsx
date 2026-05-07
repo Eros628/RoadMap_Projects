@@ -52,7 +52,7 @@ function App() {
         <Route path='/quiz' element={<Quiz timer={timer} quizItems={quizItems} currentIndex={currentIndex} setCurrentIndex={setCurrentIndex}/>}>
           <Route path='set-up' element={<SetUp timer={timer} setTimer={setTimer} />}></Route>         
           <Route path='start' element={<QuizStart  quizItems={quizItems} currentIndex={currentIndex} setCurrentIndex={setCurrentIndex} timer={timer} user={user} setUser={setUser}/>}></Route>
-          <Route path='result' element={<Result quizItems={quizItems} user={user} setUser={setUser}/>}></Route>
+          <Route path='result' element={<Result quizItems={quizItems} user={user} setUser={setUser} setCurrentIndex={setCurrentIndex} setTimer={setTimer}/>}></Route>
         </Route>
       </Routes>
      </BrowserRouter>
