@@ -1,13 +1,16 @@
-import { useEffect, useState } from "react";
+import { use, useEffect, useState } from "react";
+import ResultModal from "../components/ResultModal";
 
 
 function Result({user, setUser,quizItems}){
     const [isGreet, setIsGreet] = useState(true);
     const [result, setResult] = useState({
         userAnswer : user.answers,
-        correctAnswer: [quizItems.map((item)=> item.answer)],
+        correctAnswer: quizItems.map((item)=> item.answer),
         status: []
     });
+
+    const [isOpen, setIsOpen] = useState(false);
 
 
 
@@ -37,11 +40,27 @@ function Result({user, setUser,quizItems}){
         <>
             {isGreet ? <h1>Quiz Complete!</h1>:
                 <div className="result-container">
-                    <div>
-                        <h1>Your Score:</h1>
-                        <p>{user.score}</p>
+                    <div className="result">
+                        <h1>YOUR SCORE:</h1>
+                        <h1>{user.score +"/"+quizItems.length}</h1>
                     </div>
+
+                    <div className="result-btn-container" >
+                        <button className="btn-retake">Retake</button>
+                        <button className="btn-home">Home</button>
+                        <button onClick={
+                            ()=>{
+                                setIsOpen(!isOpen);
+                            }
+                        }
+                        className="btn-review">Review</button>
+                    </div>
+                   
                 </div>
+            }
+
+            {
+                isOpen && <ResultModal user={user} isOpen={isOpen} setIsOpen={setIsOpen} quizItems={quizItems} result={result}/>
             }
             
         </>

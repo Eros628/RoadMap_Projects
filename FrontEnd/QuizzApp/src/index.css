@@ -3,14 +3,16 @@
   --bg-color: #1B1A60;
   --text-color: white;
   --header-color: #242222;
-  font-family: 'Momo Trust Display', sans-serif ;
 }
 
-
+*{
+  font-family: 'Momo Trust Display', sans-serif ;
+}
 body{
   padding: 0;
   margin: 0;
 }
 #root{
+
   background-color: var(--bg-color);
 }

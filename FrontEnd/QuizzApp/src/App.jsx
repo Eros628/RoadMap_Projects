@@ -14,12 +14,9 @@ function App() {
     score: 0
   });
 
-
-  console.log(user);
-
   const quizItems = [
         {
-            question: "Which planet in our solar system is known as the 'Red Planet'?", 
+            question: "Which planet in our solar system is known as the 'Red Planet asdaksdkaskdkasdkdkskdskdskdskdskskdsdks '?", 
             choices: ["A: Venus", "B: Mars", "C. Saturn", "D. Jupiter"],
             answer: "B: Mars"
         },
