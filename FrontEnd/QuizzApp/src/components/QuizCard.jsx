@@ -4,8 +4,18 @@ import { ArrowRight } from "lucide-react";
 import { useNavigate } from 'react-router';
 
 function QuizCard({quizItems,item, timer, setCurrentIndex, currentIndex, user, setUser}){
+    const [selectedChoice, setSelectedChoice] = useState(null);
+    const [prevChoice, setPrevChoice] = useState(null);
+    const [isClick, setIsClick] = useState(false);
     const navigate = useNavigate();
+
     useEffect(()=>{
+
+        if(selectedChoice != null){
+            
+            setSelectedChoice(null);
+            setPrevChoice(null);
+        }
     
         if(currentIndex > user.answers.length){
             setUser(prev => {
@@ -19,6 +29,7 @@ function QuizCard({quizItems,item, timer, setCurrentIndex, currentIndex, user, s
         else{
             return;
         }
+       
     },[currentIndex])
     
     const setChoice = (userChoice)=>{
@@ -51,8 +62,15 @@ function QuizCard({quizItems,item, timer, setCurrentIndex, currentIndex, user, s
             <div className="choices">
                 {item.choices.map((choice, index)=>{
                     return(
-                    <button onClick={
+                    <button  style={{border: selectedChoice == index ? "2px solid white": "none"}} type='button' onClick={
                         ()=>{
+                            if(selectedChoice == null){
+                                setSelectedChoice(index);
+                            }
+                            else{
+                                setPrevChoice(selectedChoice);
+                                setSelectedChoice(index);
+                            }
                             setChoice(choice);
                         }
                     } className="choice" key={index}>

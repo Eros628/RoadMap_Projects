@@ -65,7 +65,7 @@ function Header({timer, currentIndex, setCurrentIndex, quizItems}){
   
     return (
         <div>
-            <div className="header" style={{width: isStart || isResult ? "100%" : "160px"}}>
+            <div className="header" style={{width: isStart || isResult ? "100%" : "160px", borderBottomRightRadius: isStart || isResult ? "0px":"25px"}}>
                 <h1>QUIZLY</h1>
                 {isStart && <p className='timer-text'>{formatTime(countTime)}</p> }
             </div>

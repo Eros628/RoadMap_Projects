@@ -224,8 +224,9 @@ button{
   background-color: #2B94F6;
 }
 
+
 .choice:nth-child(1):hover{
-  box-shadow: 0 0 5px 5px #2b94f6a4;
+   box-shadow: 0 0 5px 5px #2b94f6a4;
 }
 
 .choice:nth-child(2){
@@ -406,7 +407,7 @@ button{
   padding: 20px;
 }
 
-.results-data:hover{
+.questionResult:hover{
   height: 130px;
 }
 

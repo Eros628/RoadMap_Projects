@@ -16,7 +16,7 @@ function App() {
 
   const quizItems = [
         {
-            question: "Which planet in our solar system is known as the 'Red Planet asdaksdkaskdkasdkdkskdskdskdskdskskdsdks '?", 
+            question: "Which planet in our solar system is known as the 'Red Planet' ?", 
             choices: ["A: Venus", "B: Mars", "C. Saturn", "D. Jupiter"],
             answer: "B: Mars"
         },
